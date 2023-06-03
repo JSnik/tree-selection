@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="list" *ngFor="let filialeName of filialesData; let i = index;">
+          <div class="filialeName" [class.m-b]="filialeName.show" (click)="showHideToggle(filialeName)">
+            <span [class.rotate]="filialeName.show"> > </span>
+            <h3>{{filialeName?.ansichtName}}</h3>
+          </div>
+          <div class="show-hide" *ngIf="filialeName.show">
+            <ng-container *ngFor="let people of peopleData; let i = index">
+              <div class="peopleName" *ngIf="filialeName.ansichtName === people.filiale.ansichtName" [class.active]="choosenPerson?.name === people?.name && choosenPerson?.vorname === people?.vorname" (click)="displayPersonInfo(people)">
+                <h3>{{people?.name}}</h3>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <app-card [person]="choosenPerson" (open)="openPopup($event)"></app-card>
+      </div>
+    </div>
+  </div>
+</div>
+<app-popup *ngIf="isPopup" (cancel)="closePopup($event)" (editUser)="editUser($event)" [errors]="errors"></app-popup>

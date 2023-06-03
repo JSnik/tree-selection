@@ -1,0 +1,68 @@
+.wrapper {
+  margin-top: 100px;
+  .search-container {
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+}
+.number {
+  color: blue;
+}
+.list {
+  .filialeName {
+    display: flex;
+    align-items: center;
+    color: cornflowerblue;
+    cursor: pointer;
+  }
+  .peopleName {
+    cursor: pointer;
+  }
+  .active {
+    color: blue;
+  }
+  span {
+    font-size: 30px;
+  }
+  .show-hide {
+    margin-left: 20px;
+  }
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  max-width: 250px;
+  overflow: hidden;
+  height: 40px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 0 20px 20px 0;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.fa-search {
+  font-size: 16px;
+}
+

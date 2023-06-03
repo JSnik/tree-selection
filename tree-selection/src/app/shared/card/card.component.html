@@ -1,0 +1,26 @@
+<div class="card" *ngIf="person">
+  <div class="card-header">
+    <h2 class="card-title">{{person?.name}} {{person?.vorname}}</h2>
+    <img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-editor-pen-pencil-write-icon--4.png" alt="" (click)="openPopup(person!.id)">
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3>ansichtNam: <span>{{person?.ansichtNam}}</span></h3>
+        <h3>filialNr: <span>{{person?.filialNr}}</span></h3>
+        <h3>geburtsDatum: <span>{{person?.geburtsDatum}}</span></h3>
+        <h3>land: <span>{{person?.land}}</span></h3>
+        <h3>qualifikation: <span>{{person?.qualifikation}}</span></h3>
+        <h3>status: <span>{{person?.status}}</span></h3>
+        <h3>bundesLand: <span>{{person?.bundesLand}}</span></h3>
+      </div>
+      <div class="col-lg-6">
+        <h3>id: <span>{{person?.id}}</span></h3>
+        <h3>barcode: <span>{{person?.barcode}}</span></h3>
+        <h3>eintritsDatum: <span>{{person?.eintritsDatum}}</span></h3>
+        <h3>Admin: <span>{{person?.istAdmin ? 'Yes' : 'NO'}}</span></h3>
+        <h3>Plan: <span>{{person?.istPlan ? 'Yes' : 'No'}}</span></h3>
+      </div>
+    </div>
+  </div>
+</div>

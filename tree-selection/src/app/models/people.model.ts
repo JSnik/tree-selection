@@ -1,0 +1,22 @@
+export interface PeopleModel {
+  adkran: number,
+  ansichtNam: string,
+  barcode: string,
+  barcode1: string,
+  bundesLand: string,
+  eintritsDatum: string,
+  filialNr: number,
+  filiale: {filialNr: number, ansichtName: string, bundesLand: string, land: string },
+  geburtsDatum: string,
+  id: number,
+  istAdmin: boolean,
+  istPlan: boolean,
+  kaplan: number,
+  land: string,
+  name: string,
+  notActive: number,
+  passwort: string,
+  qualifikation: string,
+  status: string,
+  vorname: string
+}

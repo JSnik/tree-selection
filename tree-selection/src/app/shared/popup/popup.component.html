@@ -1,0 +1,20 @@
+<div class="popup-overlay">
+  <div class="popup">
+    <h2 class="popup-title">Popup Title</h2>
+    <form [formGroup]="form" (submit)="editUSer()">
+      <span class="error" *ngIf="errors">Fill both field to continue editing</span>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" class="form-control" formControlName="surname">
+      </div>
+      <div class="popup-buttons">
+        <button class="btn cancel-button" (click)="closePopup()">Cancel</button>
+        <button class="btn submit-button" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
